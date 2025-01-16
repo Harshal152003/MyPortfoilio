@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJsSquare, FaGitAlt } from 'react-icons/fa';
-import { SiMongodb, SiTailwindcss, SiDocker, SiFigma } from 'react-icons/si';
+import { SiMongodb, SiTailwindcss, } from 'react-icons/si';
 
 const skills = [
   { name: "React", icon: <FaReact className="text-blue-400 text-4xl" /> },
@@ -11,8 +11,7 @@ const skills = [
   { name: "Node.js", icon: <FaNodeJs className="text-green-500 text-4xl" /> },
   { name: "MongoDB", icon: <SiMongodb className="text-green-400 text-4xl" /> },
   { name: "Git", icon: <FaGitAlt className="text-red-500 text-4xl" /> },
-//   { name: "Figma", icon: <SiFigma className="text-purple-500 text-4xl" /> },
-//   { name: "Docker", icon: <SiDocker className="text-blue-400 text-4xl" /> },
+
 ];
 
 const SkillsSection = () => {

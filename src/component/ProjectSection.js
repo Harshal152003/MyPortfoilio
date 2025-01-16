@@ -4,60 +4,65 @@ import GoceryManagement from "../Assets/GoceryManagement.png";
 import Tourist from "../Assets/Tourist.png";
 
 const ProjectsSection = () => {
- 
   const projects = [
     {
       title: "HireUp",
       description: "This is a description of the project, explaining what it does and the technologies used.",
       techStack: "React, Tailwind CSS, Node.js",
-      image: HireUpImage, // Use the imported image here
+      image: HireUpImage,
       liveLink: "#",
-      repoLink: "#"
+      repoLink: "#",
     },
     {
-      title: "Grocery Manegement",
+      title: "Grocery Management",
       description: "This is another project description, showcasing different technologies.",
       techStack: "HTML, CSS, JavaScript",
-      image: GoceryManagement, // Replace with an actual image import or URL
+      image: GoceryManagement,
       liveLink: "#",
-      repoLink: "#"
+      repoLink: "#",
     },
     {
       title: "Tourist",
       description: "This is another project description, showcasing different technologies.",
       techStack: "HTML, CSS, JavaScript",
-      image:Tourist , // Replace with an actual image import or URL
+      image: Tourist,
       liveLink: "#",
-      repoLink: "#"
+      repoLink: "#",
     },
-    // Add more projects here
   ];
 
   return (
-    <section id="projects" className="py-16 bg-gradient-to-r from-black via-gray-900 to-gray-800 animate-gradient bg-[length:300%_300%] text-white">
-      <div className=" max-w-screen-xl mx-auto text-center">
+    <section
+      id="projects"
+      className="py-16 bg-gradient-to-r from-black via-gray-900 to-gray-800 animate-gradient bg-[length:300%_300%] text-white"
+    >
+      <div className="max-w-screen-xl mx-auto text-center px-4 sm:px-8">
         <h2 className="text-4xl font-bold mb-8">My Projects</h2>
         <div>
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} gap-8 items-center mb-16`}
+              className={`flex flex-col sm:flex-row ${
+                index % 2 === 0 ? 'sm:flex-row' : 'sm:flex-row-reverse'
+              } gap-y-8 sm:gap-x-8 items-center mb-16`}
             >
               {/* Image */}
-              <div className="flex-1 hover">
+              <div className="flex-1">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-auto object-cover"
+                  className="max-w-full h-auto object-cover rounded-lg shadow-lg"
                 />
               </div>
 
               {/* Description and Tech Stack */}
-              <div className="flex-1">
-                <h3 className="text-4xl font-semibold mb-4">{project.title}</h3>
+              <div className="flex-1 text-left">
+                <h3 className="text-3xl font-semibold mb-4">{project.title}</h3>
                 <p className="text-lg mb-4">{project.description}</p>
-                <p className=" text-base text-gray-200 mb-4">Tech Stack: {project.techStack}</p>
-                <div className="flex space-x-4">
+                <p className="text-base text-gray-300 mb-4">
+                  <span className="font-semibold">Tech Stack:</span> {project.techStack}
+                </p>
+                <div className="flex flex-wrap gap-4">
                   <a
                     href={project.liveLink}
                     target="_blank"
@@ -66,7 +71,6 @@ const ProjectsSection = () => {
                   >
                     View Project
                   </a>
-                 
                 </div>
               </div>
             </div>
