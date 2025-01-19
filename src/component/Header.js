@@ -1,23 +1,33 @@
 // src/components/Header.js
 import React, { useState } from "react";
+import Logo from "../Assets/logo1.png"; // Import the logo image
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className="bg-gray-800 text-white fixed top-0 w-full shadow-lg z-50">
-      <div className="container mx-auto flex justify-between items-center p-4">
+      <div className="container mx-auto flex justify-between items-center p-2">
         {/* Logo */}
-        <div className="text-3xl font-bold  bg-gradient-to-r from-orange-500 via-pink-500 to-red-500 bg-clip-text text-transparent">
-          <a href="#hero" className="hover:text-blue-400 transition duration-300">
-            Harshal Ladukar
-          </a>
+        <div className="flex items-center space-x-3">
+          <img src={Logo} alt="Logo" className="w-16 h-16" />
+          <div className="text-3xl font-bold bg-gradient-to-r from-orange-500 via-pink-500 to-red-500 bg-clip-text text-transparent">
+            <a href="#hero" className="hover:text-blue-400 transition duration-300">
+              Harshal Ladukar
+            </a>
+          </div>
         </div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex text-2xl space-x-6">
+        <li>
+            <a href="#Home" className="hover:text-blue-400  transition duration-300">
+             Home
+            </a>
+          </li>
+          <li></li>
           <li>
-            <a href="#education" className="hover:text-blue-400  transition duration-300">
+            <a href="#about" className="hover:text-blue-400  transition duration-300">
               About
             </a>
           </li>
@@ -29,6 +39,12 @@ const Header = () => {
           <li>
             <a href="#skills" className="hover:text-blue-400 transition duration-300">
               Skills
+            </a>
+          </li>
+          
+          <li>
+            <a href="#education" className="hover:text-blue-400 transition duration-300">
+              Education
             </a>
           </li>
           <li>
@@ -70,6 +86,11 @@ const Header = () => {
               onClick={() => setIsOpen(false)}
             >
               Projects
+            </a>
+          </li>
+          <li>
+            <a href="#education" className="hover:text-blue-400 transition duration-300">
+              Education
             </a>
           </li>
           <li>

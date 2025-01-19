@@ -34,13 +34,14 @@ const EducationSection = () => {
           {educationData.map((education, index) => (
             <div
               key={index}
-              className="bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow-lg text-left"
+              className="group bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow-lg text-left transition-all duration-500 ease-in-out transform hover:scale-105 hover:bg-blue-600 hover:shadow-2xl"
             >
               <h3 className="text-2xl font-semibold mb-2">{education.degree}</h3>
-              <p className="text-lg font-medium text-blue-400">{education.institute}</p>
-              <p className="text-sm font-medium text-gray-300 mb-4">
-                {education.duration}
+              <p className="text-lg font-medium text-blue-400 group-hover:text-white transition-all duration-300">
+                {/* Institute text will change to white on hover */}
+                {education.institute}
               </p>
+              <p className="text-sm font-medium text-gray-300 mb-4">{education.duration}</p>
               <p className="text-gray-200">{education.description}</p>
             </div>
           ))}

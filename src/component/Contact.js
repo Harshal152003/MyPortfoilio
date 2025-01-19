@@ -17,30 +17,27 @@ const ContactSection = () => {
           {/* Call */}
           <a
             href="tel:+91 9689420767"
-            className="flex flex-col items-center space-y-2 hover:text-blue-500 transition duration-300"
+            className="flex flex-col items-center space-y-2 transform hover:scale-110 hover:shadow-2xl hover:text-blue-500 transition-all duration-300"
           >
             <FaPhoneAlt className="text-4xl" />
-            <span></span>
           </a>
 
           {/* Email */}
           <a
             href="mailto:harshladukar@gmail.com"
-            className="flex flex-col items-center space-y-2 hover:text-blue-500 transition duration-300"
+            className="flex flex-col items-center space-y-2 transform hover:scale-110 hover:shadow-2xl hover:text-blue-500 transition-all duration-300"
           >
             <FaEnvelope className="text-4xl" />
-            <span></span>
           </a>
 
           {/* LinkedIn */}
           <a
-            href="https://linkedin.com/in/harshal Ladukar"
+            href="https://linkedin.com/in/harshal-ladukar"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center space-y-2 hover:text-blue-500 transition duration-300"
+            className="flex flex-col items-center space-y-2 transform hover:scale-110 hover:shadow-2xl hover:text-blue-500 transition-all duration-300"
           >
             <FaLinkedin className="text-4xl" />
-            <span></span>
           </a>
 
           {/* GitHub */}
@@ -48,10 +45,9 @@ const ContactSection = () => {
             href="https://github.com/your-profile"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center space-y-2 hover:text-blue-500 transition duration-300"
+            className="flex flex-col items-center space-y-2 transform hover:scale-110 hover:shadow-2xl hover:text-blue-500 transition-all duration-300"
           >
             <FaGithub className="text-4xl" />
-            <span></span>
           </a>
         </div>
       </div>
